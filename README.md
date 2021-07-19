@@ -1,5 +1,9 @@
 # ApiRestSpringBoot
 Api Rest com crud básico de usuário 
+
+# COLLECTION POSTMAN
+https://documenter.getpostman.com/view/14182993/TzmCiZbn
+
 # POST (novo usuário)
 	http://localhost:8080/api/register
 	
@@ -42,5 +46,4 @@ Api Rest com crud básico de usuário
 # DELETE
 	http://localhost:8080/users
 
-#Colection do postman
-https://documenter.getpostman.com/view/14182993/TzmCiZbn
+
