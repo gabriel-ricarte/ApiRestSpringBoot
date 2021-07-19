@@ -23,8 +23,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
         .authorizeRequests()
-        .antMatchers("/api/registration/**").permitAll()
-        .antMatchers("/users/login").permitAll()
+        .antMatchers("/api/login/**").permitAll()
+        .antMatchers("/api/registration/**").permitAll()    
+        .antMatchers("/login/**").permitAll()     
         .anyRequest().authenticated()
         .and()
         .formLogin()
@@ -43,5 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         provider.setUserDetailsService(userService);
         return provider;
     }
+
+
 
 }

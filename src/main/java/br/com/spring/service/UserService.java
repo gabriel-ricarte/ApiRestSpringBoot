@@ -1,5 +1,6 @@
 package br.com.spring.service;
 
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -40,20 +41,4 @@ public class UserService implements UserDetailsService{
        return "Usuário Registrado com sucesso !";
     }
 
-    public String signInUser(User user){
-
-        boolean userExists = userRepository.findByLogin(user.getLogin()).isPresent();
-        
-        if(userExists){
-            throw new IllegalStateException("Login ja existe !");
-        }
-        
-        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
- 
-        user.setPassword(encodedPassword);
- 
-        userRepository.save(user);
- 
-        return "Usuário Registrado com sucesso !";
-     }
 }
