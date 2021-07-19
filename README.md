@@ -11,15 +11,21 @@ Api Rest com crud básico de usuário
     "password" : "123456",
     "github" : "gabriel-ricarte",
     "email" : "bielricarte@gmail.com"
-  }
+  	}
 	or
-  {
-      "name": "Vedant Jajoo",
-      "login": "coderjojo",
-      "password" : "123456",
-      "github" : "coderjojo",
-      "email" : "coderjojo@coderjojo.com"
-  }
+	  {
+	      "name": "Vedant Jajoo",
+	      "login": "coderjojo",
+	      "password" : "123456",
+	      "github" : "coderjojo",
+	      "email" : "coderjojo@coderjojo.com"
+	  }
+# POST (login)
+	http://localhost:8080/login
+# Requests
+
+	--form 'username="bielricarte"' \
+	--form 'password="123456"'	
 
 # GET
 	http://localhost:8080/users
