@@ -85,7 +85,7 @@ private GithubService githubService;
         return null;
     }
 
-    @PreAuthorize("hasRole('ADMIN')")   
+    @PreAuthorize("hasRole('USER')")   
     @PutMapping
     public User updateUser(@RequestBody User user){       
         return this.userRepository.save(user);
